@@ -1,6 +1,7 @@
 public class Gato {
 
         private String nombre;
+        private boolean estado;
         private String color;
         private String pelo;
         private boolean agil;
@@ -19,7 +20,20 @@ public class Gato {
 
         }
 
+    public void DisparaGato(){
+
+        if(!this.estado){
+            System.out.println( this.nombre + " ya esta muerto dejalo :(");
+        }
+        else if(Math.random()>0.7){
+            System.out.println(this.nombre + " ha muerto :(");
+            this.estado = false;
+        }else {
+            System.out.println(this.nombre + " ha sobrevivido :)");
+        }
+    }
         @Override
+
         public String toString() {
 
             String estado;
